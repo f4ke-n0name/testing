@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if object_list %}
+{% for object in object_list %}
+    Видео: {{ object.name}}  <a href="{% url 'client:download_file' object.pk %}">Скачать</a>
+    <br>
+    {% endfor %}
+{% else %}
+Нет видео
+{% endif %}
+</body>
+</html>
