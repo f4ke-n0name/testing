@@ -1,6 +1,6 @@
-#Как запустить приложение
+# Как запустить приложение
 
-##Установить и активировать виртуальную среду
+## Установить и активировать виртуальную среду
 - **sudo apt install python3-venv -y** для UNIX систем или **python -m venv venv** для Windows
 - **source test/test_env/bin/activate**  для UNIX систем или **venv\Scripts\activate.bat** для Windows
 ## Установить нужные библиотеки 
