@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 import movis as mv
-
+import hashlib
 
 def get_video_from_text(text: str):
     if len(text) == 0:
@@ -20,5 +21,6 @@ def get_video_from_text(text: str):
         blending_mode='normal')
     scene['text'].position.enable_motion().extend(
         keyframes=[0.0, 2.0], values=[start_pos, end_pos], easings=['ease_in_out'])
+    text = str(hashlib.md5(text.encode()).hexdigest())
     scene.write_video(f"media/videos/{text}.mp4")
     return {'name': text, 'path': f"videos/{text}.mp4"}
